@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "masih"
+version = "1.0.0"
+description = "ماسح — يحوّل الوثائق الممسوحة إلى نصّ عربي سليم قابل للنسخ، ويدقّق آياته"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+
+# ما يحتاجه البرنامج ليعمل. لا شيء غيرها — ولا يحتاج المستخدم
+# النهائي تثبيت أيّها، فكلّها مضمّنة داخل masih.exe.
+dependencies = [
+    "fpdf2>=2.8.0",       # بناء الـ PDF
+    "uharfbuzz>=0.39.0",  # تشكيل العربية — بدونه يخرج النص مقلوباً
+    "pypdf>=4.0.0",       # قراءة الناتج للتأكد أن نصّه قابل للنسخ
+    # النافذة الأصيلة فوق WebView2. تُطلب صراحةً لا بالتبعية: هي التي
+    # تصل إلى إعدادات WebView2 فتُطفئ قوائم المتصفّح ومفاتيحه.
+    "pywebview>=5.0 ; sys_platform == 'win32'",
+    "pythonnet>=3.0 ; sys_platform == 'win32'",
+]
+
+[project.optional-dependencies]
+# أدوات التطوير والبناء وحدها
+dev = [
+    "pyinstaller>=6.0",
+    "pdfplumber>=0.11",   # الفحص البصري لمحاذاة الأسطر في الاختبارات
+    "pillow>=10.0",       # توليد أيقونة البرنامج
+]
+
+[project.scripts]
+masih = "masih.__main__:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+masih = ["assets/*", "assets/fonts/*"]

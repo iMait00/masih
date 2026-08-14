@@ -1,0 +1,39 @@
+# مخرجات البناء — يُعاد توليدها بأمر واحد، فلا تُحفظ في المستودع
+masih.exe
+_dist/
+_build/
+dist/
+build/
+*.spec.bak
+
+# بايثون
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# سجلّات ومخرجات محلية
+*.log
+_smoke.pdf
+
+# أسرار — المفتاح يُحفظ في المتصفح لا في ملف
+.env
+
+# نظام التشغيل والمحررات
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
+
+# إعدادات وكلاء التحرير — محليّة لكلّ جهاز، لا شأن للمستودع بها
+.claude/
+.opencode/
+
+# مخرجات أدوات التحليل ونسخ سابقة من البرنامج
+graphify-out/
+legacy/
+_old_masih.exe
+tools/_page_before_extraction.html
+AGENTS.md
