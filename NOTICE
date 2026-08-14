@@ -1,0 +1,12 @@
+THIRD-PARTY COMPONENTS
+
+This project bundles the following third-party assets, which remain under
+their own licenses:
+
+* Amiri and Amiri Quran fonts (src/masih/assets/fonts/)
+  Copyright (c) 2010-2024, Khaled Hosny.
+  Licensed under the SIL Open Font License, Version 1.1.
+  The full license text ships alongside the fonts in Amiri-OFL.txt.
+
+The text of the Qur'an bundled in src/masih/assets/quran.json is not a
+copyrightable work.

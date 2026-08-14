@@ -216,7 +216,7 @@ build.bat
 
 ## الترخيص
 
-الشيفرة: MIT — نصّها في [`LICENSE`](LICENSE).
+الشيفرة: MIT — نصّها في [`LICENSE`](LICENSE)، وحقوقُ ما ضُمّن من غيرها في [`NOTICE`](NOTICE).
 خطّا Amiri و Amiri Quran: رخصة الخطوط المفتوحة (SIL OFL)، نصّها في
 `src/masih/assets/fonts/Amiri-OFL.txt`.
 نصّ المصحف من [risan/quran-json](https://github.com/risan/quran-json).
